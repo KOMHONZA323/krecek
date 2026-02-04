@@ -267,6 +267,6 @@ void game_paint(unsigned dt_usec)
 				selected_block_type);
 		tft_draw_string(5, 105, rgb_to_rgb565(200, 200, 200), "A: Place, B: Break");
 	} else {
-		tft_draw_string(5, 105, rgb_to_rgb565(200, 200, 200), "A/B: Fly, Y/X: Look");
+		tft_draw_string(5, 105, rgb_to_rgb565(200, 200, 200), "Vol: Fly, Brack: Look");
 	}
 }

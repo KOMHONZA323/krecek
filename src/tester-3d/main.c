@@ -71,24 +71,24 @@ void game_input(unsigned dt_usec)
 
 	// --- Actions based on Mode ---
 	if (current_mode == MODE_MOVE_LOOK) {
-		// Fly Up (A)
-		if (sdk_inputs.a) {
+		// Fly Up (Vol Up)
+		if (sdk_inputs.vol_up) {
 			player.z += move_speed * dt;
 			if (player.z >= MAP_D - 0.5f)
 				player.z = MAP_D - 0.5f;
 		}
-		// Fly Down (B)
-		if (sdk_inputs.b) {
+		// Fly Down (Vol Down)
+		if (sdk_inputs.vol_down) {
 			player.z -= move_speed * dt;
 			if (player.z < 0.5f)
 				player.z = 0.5f;
 		}
-		// Pitch Up (Y)
-		if (sdk_inputs.y) {
+		// Pitch Up (Brack R)
+		if (sdk_inputs.brack_r > 200) {
 			player.pitch += rot_speed * dt;
 		}
-		// Pitch Down (X)
-		if (sdk_inputs.x) {
+		// Pitch Down (Brack L)
+		if (sdk_inputs.brack_l > 200) {
 			player.pitch -= rot_speed * dt;
 		}
 	} else { // MODE_EDIT
