@@ -1,6 +1,9 @@
 add_executable(
     tester-3d
     main.c
+    map.c
+    light.c
+    render.c
 )
 
 target_link_libraries(tester-3d krecek)
